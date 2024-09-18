@@ -1,0 +1,121 @@
+import pandas as pd
+
+
+# Load the Excel file
+file_path = 'raadata.xlsx'  # Replace 'path_to_your_file.xlsx' with the path to your Excel file
+df = pd.read_excel(file_path)
+
+
+# Accessing data in cell A4
+#balle = df.iloc[2, 0]  # Row index 3 and column index 0
+balle_measurements_dato = [{'key1':'2', 'key2':'1'},{'key1':'3', 'key2':'1'},{'key1':'4', 'key2':'1'}]
+balle_measurements_eryth = [{'key1':'2', 'key2':'2'},{'key1':'3', 'key2':'2'},{'key1':'4', 'key2':'2'}]
+balle_measurements_melanin = [{'key1':'2', 'key2':'3'},{'key1':'3', 'key2':'3'},{'key1':'4', 'key2':'3'}]
+balle_measurements_CIE_L = [{'key1':'2', 'key2':'4'},{'key1':'3', 'key2':'4'},{'key1':'4', 'key2':'4'}]
+balle_measurements_CIE_A = [{'key1':'2', 'key2':'5'},{'key1':'3', 'key2':'5'},{'key1':'4', 'key2':'5'}]
+balle_measurements_CIE_B = [{'key1':'2', 'key2':'6'},{'key1':'3', 'key2':'6'},{'key1':'4', 'key2':'6'}]
+balle_measurements_ITA = [{'key1':'2', 'key2':'12'},{'key1':'3', 'key2':'12'},{'key1':'4', 'key2':'12'}]
+balle_measures = [balle_measurements_eryth,balle_measurements_melanin,balle_measurements_CIE_L,
+                  balle_measurements_CIE_A,balle_measurements_CIE_B,balle_measurements_ITA]
+
+ryg_measurements_dato = [{'key1':'5', 'key2':'1'} ,{'key1':'6', 'key2':'1'},{'key1':'7', 'key2':'1'}]
+ryg_measurements_eryth = [{'key1':'5', 'key2':'2'},{'key1':'6', 'key2':'2'},{'key1':'7', 'key2':'2'}]
+ryg_measurements_melanin = [{'key1':'5', 'key2':'3'},{'key1':'6', 'key2':'3'},{'key1':'7', 'key2':'3'}]
+ryg_measurements_CIE_L = [{'key1':'5', 'key2':'4'},{'key1':'6', 'key2':'4'},{'key1':'7', 'key2':'4'}]
+ryg_measurements_CIE_A = [{'key1':'5', 'key2':'5'},{'key1':'6', 'key2':'5'},{'key1':'7', 'key2':'5'}]
+ryg_measurements_CIE_B = [{'key1':'5', 'key2':'6'},{'key1':'6', 'key2':'6'},{'key1':'7', 'key2':'6'}]
+ryg_measurements_ITA = [{'key1':'5', 'key2':'12'},{'key1':'6', 'key2':'12'},{'key1':'7', 'key2':'12'}]
+ryg_measures = [ryg_measurements_eryth,ryg_measurements_melanin,ryg_measurements_CIE_L,
+                  ryg_measurements_CIE_A,ryg_measurements_CIE_B,ryg_measurements_ITA]
+
+
+
+arm_measurements_dato = [{'key1':'8', 'key2':'1'} ,{'key1':'9', 'key2':'1'},{'key1':'10', 'key2':'1'}]
+arm_measurements_eryth = [{'key1':'8', 'key2':'2'},{'key1':'9', 'key2':'2'},{'key1':'10', 'key2':'2'}]
+arm_measurements_melanin = [{'key1':'8', 'key2':'3'},{'key1':'9', 'key2':'3'},{'key1':'10', 'key2':'3'}]
+arm_measurements_CIE_L = [{'key1':'8', 'key2':'4'},{'key1':'9', 'key2':'4'},{'key1':'10', 'key2':'4'}]
+arm_measurements_CIE_A = [{'key1':'8', 'key2':'5'},{'key1':'9', 'key2':'5'},{'key1':'10', 'key2':'5'}]
+arm_measurements_CIE_B = [{'key1':'8', 'key2':'6'},{'key1':'9', 'key2':'6'},{'key1':'10', 'key2':'6'}]
+arm_measurements_ITA = [{'key1':'8', 'key2':'12'},{'key1':'9', 'key2':'12'},{'key1':'10', 'key2':'12'}]
+arm_measures = [arm_measurements_eryth,arm_measurements_melanin,arm_measurements_CIE_L,
+                  arm_measurements_CIE_A,arm_measurements_CIE_B,arm_measurements_ITA]
+
+bryst_measurements = [{'key1':'11', 'key2':'0'} ,{'key1':'12', 'key2':'0'},{'key1':'13', 'key2':'0'}]
+
+bryst_measurements_dato = [{'key1':'11', 'key2':'1'} ,{'key1':'12', 'key2':'1'},{'key1':'13', 'key2':'1'}]
+bryst_measurements_eryth = [{'key1':'11', 'key2':'2'},{'key1':'12', 'key2':'2'},{'key1':'13', 'key2':'2'}]
+bryst_measurements_melanin = [{'key1':'11', 'key2':'3'},{'key1':'12', 'key2':'3'},{'key1':'13', 'key2':'3'}]
+bryst_measurements_CIE_L = [{'key1':'11', 'key2':'4'},{'key1':'12', 'key2':'4'},{'key1':'13', 'key2':'4'}]
+bryst_measurements_CIE_A = [{'key1':'11', 'key2':'5'},{'key1':'12', 'key2':'5'},{'key1':'13', 'key2':'5'}]
+bryst_measurements_CIE_B = [{'key1':'11', 'key2':'6'},{'key1':'12', 'key2':'6'},{'key1':'13', 'key2':'6'}]
+bryst_measurements_ITA = [{'key1':'11', 'key2':'12'},{'key1':'12', 'key2':'12'},{'key1':'13', 'key2':'12'}]
+bryst_measures = [bryst_measurements_eryth,bryst_measurements_melanin,bryst_measurements_CIE_L,
+                  bryst_measurements_CIE_A,bryst_measurements_CIE_B,bryst_measurements_ITA]
+
+kind_measurements = [{'key1':'14', 'key2':'0'} ,{'key1':'15', 'key2':'0'},{'key1':'16', 'key2':'0'}]
+
+kind_measurements_dato = [{'key1':'14', 'key2':'1'} ,{'key1':'15', 'key2':'1'},{'key1':'16', 'key2':'1'}]
+kind_measurements_eryth = [{'key1':'14', 'key2':'2'},{'key1':'15', 'key2':'2'},{'key1':'16', 'key2':'2'}]
+kind_measurements_melanin = [{'key1':'14', 'key2':'3'},{'key1':'15', 'key2':'3'},{'key1':'16', 'key2':'3'}]
+kind_measurements_CIE_L = [{'key1':'14', 'key2':'4'},{'key1':'15', 'key2':'4'},{'key1':'16', 'key2':'4'}]
+kind_measurements_CIE_A = [{'key1':'14', 'key2':'5'},{'key1':'15', 'key2':'5'},{'key1':'16', 'key2':'5'}]
+kind_measurements_CIE_B = [{'key1':'14', 'key2':'6'},{'key1':'15', 'key2':'6'},{'key1':'16', 'key2':'6'}]
+kind_measurements_ITA = [{'key1':'14', 'key2':'12'},{'key1':'15', 'key2':'12'},{'key1':'16', 'key2':'12'}]
+kind_measures = [kind_measurements_eryth,kind_measurements_melanin,kind_measurements_CIE_L,
+                  kind_measurements_CIE_A,kind_measurements_CIE_B,kind_measurements_ITA]
+
+def get_median(list_of_measures):
+    listOfFieldMeasurements = []
+    all_average_balle_results = []
+    for balle_list in list_of_measures:
+    # Loop through the list of dictionaries
+        for balle in balle_list:
+            # Each `measurement` is a dictionary
+            # Access the values using the keys 'key1' and 'key2'
+            key1_value = balle['key1']
+            key2_value = balle['key2']
+            
+            field_measurement = df.iloc[int(key1_value), int(key2_value)]
+
+            listOfFieldMeasurements.append(field_measurement)
+            # Print the values (or do other processing)    
+            #print("Data in cell :", df.iloc[int(key1_value), int(key2_value)])
+
+        # Calculate the average
+        average_value_balle_ITA = sum(listOfFieldMeasurements) / len(listOfFieldMeasurements)
+        all_average_balle_results.append(average_value_balle_ITA)
+        listOfFieldMeasurements.clear()
+    listOfFieldMeasurements.clear()
+
+    return all_average_balle_results
+
+
+balle = get_median(balle_measures)
+ryg = get_median(ryg_measures)
+arm = get_median(arm_measures)
+bryst = get_median(bryst_measures)
+kind = get_median(kind_measures)
+
+# Sample DataFrame
+data = {
+    'Label': ['Balle', 'Ryg', 'Arm', 'Bryst', 'Kind',''],
+    'Eryth': [balle[0], ryg[0],arm[0],bryst[0],kind[0],""],
+    'Melanin': [balle[1], ryg[1],arm[1],bryst[1],kind[1],""],
+    'CIE-L*': [balle[2], ryg[2],arm[2],bryst[2],kind[2],""],
+    'CIE-a*':[balle[3], ryg[3],arm[3],bryst[3],kind[3],""],
+    'CIE-b*':[balle[4], ryg[4],arm[4],bryst[4],kind[4],""],
+    'ITA*':[balle[5], ryg[5],arm[5],bryst[5],kind[5],""],
+    'Dato':[str(df.iloc[2, 1]),"","","","",""]
+}
+
+print(df.iloc[2,1])
+
+df = pd.DataFrame(data)
+
+
+# Write the DataFrame to an Excel file
+df.to_excel('output.xlsx', sheet_name='Sheet1', index=False, engine='openpyxl')
+
+# Print confirmation
+#print("DataFrame is written to Excel file successfully.")
+#---------------RYG---------------#
